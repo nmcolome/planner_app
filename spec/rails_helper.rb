@@ -59,7 +59,7 @@ RSpec.configure do |config|
   # Filter lines from Rails gems in backtraces.
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
-  # config.filter_gems_from_backtrace("gem name")
+  config.filter_gems_from_backtrace('factory_bot-5.1.1', 'rack-2.2.2', 'railties-5.1.7', 'capybara-3.31.0', 'shoulda-matchers-4.2.0')
   config.include FactoryBot::Syntax::Methods
 end
 
