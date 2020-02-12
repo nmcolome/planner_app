@@ -1,5 +1,6 @@
 <h1>All Ingredients</h1>
 
+<%= link_to 'Add new ingredient', new_ingredient_path %>
 <ul>
   <% @ingredients.each do |ingredient| %>
     <li><%= link_to ingredient.name, ingredient_path(ingredient) %></li>
