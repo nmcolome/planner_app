@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get '/ingredients', to: 'ingredients#index'
+  resources :ingredients, only: [:index, :show]
 end

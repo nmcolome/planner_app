@@ -9,10 +9,10 @@ RSpec.describe 'User sees one ingredient' do
 
       click_on food.name
 
-      expect(current_path).to eq(ingredient_path(ingredient))
+      expect(current_path).to eq(ingredient_path(food))
       expect(page).to have_content(food.name)
       expect(page).to have_content(food.category)
-      expect(page).to have_content(food.friendly)
+      expect(page).to have_content(food.status)
     end
   end
 end
