@@ -1,9 +1,11 @@
 <h1>All Ingredients</h1>
 
 <%= link_to 'Add new ingredient', new_ingredient_path %>
-<ul>
+<table>
   <% @ingredients.each do |ingredient| %>
-    <li><%= link_to ingredient.name, ingredient_path(ingredient) %></li>
-    <%= link_to 'Update', edit_ingredient_path(ingredient) %>
+    <tr>
+      <td><%= link_to ingredient.name, ingredient_path(ingredient) %></td>
+      <td><%= link_to 'Update', edit_ingredient_path(ingredient) %></td>
+    </tr>
   <% end %>
-</ul>
+</table>
