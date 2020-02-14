@@ -23,4 +23,9 @@ RSpec.describe Ingredient do
       expect(ingredient.status).to eq("unknown")
     end
   end
+
+  describe 'relationships' do
+    it { should have_many :amounts }
+    it { should have_many(:recipes).through(:amounts) }
+  end
 end
