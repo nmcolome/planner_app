@@ -11,7 +11,6 @@ RSpec.describe Amount do
   describe 'validations' do
     it { should validate_presence_of :amount }
     it { should validate_presence_of :unit }
-    it { should validate_presence_of :optional }
   end
 
   describe 'enums' do
