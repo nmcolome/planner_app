@@ -13,7 +13,6 @@ RSpec.describe 'User sees a recipe' do
 
       expect(current_path).to eq(recipe_path(recipe))
       expect(page).to have_content(recipe.title)
-      expect(page).to have_content(recipe.category)
       expect(page).to have_content(recipe.servings)
       expect(page).to have_content(amount.amount)
       expect(page).to have_content(amount.unit)
