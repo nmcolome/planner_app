@@ -2,19 +2,14 @@ require 'rails_helper'
 
 RSpec.describe Amount do
   describe 'attributes' do
-    it { should respond_to :amount } #integer
+    it { should respond_to :amount }
     it { should respond_to :unit }
-    it { should respond_to :comment } #string
-    it { should respond_to :optional } #boolean
-  end
-
-  describe 'validations' do
-    it { should validate_presence_of :amount }
-    it { should validate_presence_of :unit }
+    it { should respond_to :comment }
+    it { should respond_to :optional }
   end
 
   describe 'enums' do
-    it { should define_enum_for(:unit).with_values([:tsp, :tbsp, :cup, :ounce, :quart, :gallon, :lb, :can, :large, :small, :medium]) }
+    it { should define_enum_for(:unit).with_values([:tsp, :tbsp, :cup, :ounce, :quart, :gallon, :lb, :can, :large, :small, :medium, :clove, :inch, :whole]) }
   end
 
   describe 'default attributes' do

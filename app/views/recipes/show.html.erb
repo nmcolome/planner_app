@@ -1,0 +1,18 @@
+<h1><%= @recipe.title %></h1>
+
+<p><%= @recipe.servings %> servings</p>
+<table>
+  <% @recipe.amounts.each do |element| %>
+  <tr>
+    <td><%= element.amount %> <%= element.unit %></td>
+    <td><%= element.ingredient.name %></td>
+    <td><%= element.comment if !element.comment.nil? %></td>
+    <td><%= '(optional)' if element.optional %></td>
+    <td><%= element.ingredient.status %></td>
+  </tr>
+  <% end %>
+</table>
+
+<div>
+  <p><%= @recipe.instructions %></p>
+</div>
