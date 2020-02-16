@@ -2,6 +2,8 @@
 
 <table>
   <% @recipes.each do |recipe| %>
-    <td><%= link_to recipe.title, recipe_path(recipe) %></td>
+    <tr>
+      <td><%= link_to recipe.title, recipe_path(recipe) %></td>
+    </tr>
   <% end %>
 </table>

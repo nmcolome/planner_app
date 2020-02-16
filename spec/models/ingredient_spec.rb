@@ -13,7 +13,7 @@ RSpec.describe Ingredient do
   end
 
   describe 'enum' do
-    it { should define_enum_for(:category).with_values([:dairy_and_alternatives, :fruits, :vegetables, :beans, :nuts, :grains, :meats_and_poultry, :fish_and_seafood, :spices]) }
+    it { should define_enum_for(:category).with_values([:dairy_and_alternatives, :fruits, :vegetables, :beans, :nuts, :grains, :meats_and_poultry, :fish_and_seafood, :spices, :liquids]) }
     it { should define_enum_for(:status).with_values([:unknown, :friendly, :unfriendly]) }
   end
 
